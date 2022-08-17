@@ -1,0 +1,66 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+
+        <form #tipoMascotaForm="ngForm" (ngSubmit)="addTipoMascota(tipoMascotaForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="tipoMascotaService.selectedTipoMascota._id">
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese el nombre del tipo de mascota" [(ngModel)]="tipoMascotaService.selectedTipoMascota.nombre">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="tamanoRaza" class="form-control" placeholder="Ingrese el tamaño de raza del tipo de mascota" [(ngModel)]="tipoMascotaService.selectedTipoMascota.tamanoRaza">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="edad" class="form-control" placeholder="Ingrese la edad del tipo de mascota" [(ngModel)]="tipoMascotaService.selectedTipoMascota.edad">
+          </div>
+
+          <button type="reset" class="btn btn-primary me-1 mt-2" >
+            Limpiar
+          </button>
+
+          <button type="submit" class="btn bg-light me-1 mt-2">
+            Guardar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tamaño de raza</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Operaciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let tipoMascota of tipoMascotaService.tipoMascotas">
+        <td>{{ tipoMascota.nombre }}</td>
+        <td>{{ tipoMascota.tamanoRaza }}</td>
+        <td>{{ tipoMascota.edad }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="editTipoMascota(tipoMascota)">
+            <i class="material-icons">edit</i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTipoMascota(tipoMascota._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
