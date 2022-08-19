@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TipoMascotaService } from "../../services/tipo-mascota.service";
+import { TipoMascotaService } from "../../services/tipo-mascota/tipo-mascota.service";
 import { NgForm } from "@angular/forms";
 
 @Component({

@@ -20,7 +20,7 @@
             <input type="text" name="edad" class="form-control" placeholder="Ingrese la edad del tipo de mascota" [(ngModel)]="tipoMascotaService.selectedTipoMascota.edad">
           </div>
 
-          <button type="reset" class="btn btn-primary me-1 mt-2" >
+          <button type="reset" class="btn btn-primary me-1 mt-2" (click)="resetForm(tipoMascotaForm)">
             Limpiar
           </button>
 

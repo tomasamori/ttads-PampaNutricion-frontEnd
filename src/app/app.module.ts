@@ -6,11 +6,19 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TipoMascotaComponent } from './components/tipo-mascota/tipo-mascota.component';
+import { HomeComponent } from './components/home/home.component';
+import { LocalidadComponent } from './components/localidad/localidad.component';
+import { NavmenuComponent } from './components/navmenu/navmenu.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TipoMascotaComponent
+    TipoMascotaComponent,
+    HomeComponent,
+    LocalidadComponent,
+    NavmenuComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
