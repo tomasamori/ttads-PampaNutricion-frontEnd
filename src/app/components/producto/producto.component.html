@@ -1,0 +1,72 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+
+        <form #productoForm="ngForm" (ngSubmit)="addProducto(productoForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="productoService.selectedProducto._id">
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese el nombre del Producto" [(ngModel)]="productoService.selectedProducto.nombre">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="marca" class="form-control" placeholder="Ingrese la marca del Producto" [(ngModel)]="productoService.selectedProducto.marca">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="descripcion" class="form-control" placeholder="Ingrese la descripcion del Producto" [(ngModel)]="productoService.selectedProducto.descripcion">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="peso" class="form-control" placeholder="Ingrese el peso del Producto" [(ngModel)]="productoService.selectedProducto.peso">
+          </div>
+
+          <button type="reset" class="btn btn-primary me-1 mt-2" (click)="resetForm(productoForm)">
+            Limpiar
+          </button>
+
+          <button type="submit" class="btn bg-light me-1 mt-2">
+            Guardar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Peso</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let producto of productoService.producto">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.marca }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.peso }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="editProducto(producto)">
+            <i class="material-icons">edit</i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProducto(producto._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
