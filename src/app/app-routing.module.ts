@@ -5,6 +5,9 @@ import {LocalidadComponent} from "./components/localidad/localidad.component";
 import {TipoMascotaComponent} from "./components/tipo-mascota/tipo-mascota.component";
 import {PagenotfoundComponent} from "./components/pagenotfound/pagenotfound.component";
 import {ProductoComponent} from "./components/producto/producto.component";
+import {SucursalComponent} from "./components/sucursal/sucursal.component";
+import {ProveedorService} from "./services/proveedor/proveedor.service";
+import {ProveedorComponent} from "./components/proveedor/proveedor.component";
 
 //Rutas de Navegacion
 const routes: Routes = [
@@ -13,6 +16,8 @@ const routes: Routes = [
   {path: 'localidad', component: LocalidadComponent},
   {path: 'tipo-mascota', component: TipoMascotaComponent},
   {path: 'producto', component: ProductoComponent},
+  {path: 'sucursal', component: SucursalComponent},
+  {path: 'proveedor', component: ProveedorComponent},
   {path: '**', component: PagenotfoundComponent}, //Comodin: Cuando se ingresa una url que no existe
 
 

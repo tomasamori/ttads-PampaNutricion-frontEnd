@@ -11,6 +11,8 @@ import { LocalidadComponent } from './components/localidad/localidad.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { SucursalComponent } from './components/sucursal/sucursal.component';
+import { ProveedorComponent } from './components/proveedor/proveedor.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductoComponent } from './components/producto/producto.component';
     LocalidadComponent,
     NavmenuComponent,
     PagenotfoundComponent,
-    ProductoComponent
+    ProductoComponent,
+    SucursalComponent,
+    ProveedorComponent
   ],
   imports: [
     BrowserModule,
