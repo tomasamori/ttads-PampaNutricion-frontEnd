@@ -1,0 +1,65 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+
+        <form #sucursalForm="ngForm" (ngSubmit)="addSucursal(sucursalForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="sucursalService.selectedSucursal._id">
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese el nombre de la Sucursal" [(ngModel)]="sucursalService.selectedSucursal.nombre">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="direccion" class="form-control" placeholder="Ingrese la direccion de la sucursal" [(ngModel)]="sucursalService.selectedSucursal.direccion">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="localidad" class="form-control" placeholder="Ingrese la localidad de la sucursal" [(ngModel)]="sucursalService.selectedSucursal.localidad">
+          </div>
+
+          <button type="reset" class="btn btn-primary me-1 mt-2" (click)="resetForm(sucursalForm)">
+            Limpiar
+          </button>
+
+          <button type="submit" class="btn bg-light me-1 mt-2">
+            Guardar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Localidad</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let sucursal of sucursalService.sucursal">
+        <td>{{ sucursal.nombre }}</td>
+        <td>{{ sucursal.direccion }}</td>
+        <td>{{ sucursal.localidad }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="editSucursal(sucursal)">
+            <i class="material-icons">edit</i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteSucursal(sucursal._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
