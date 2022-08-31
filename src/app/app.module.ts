@@ -13,6 +13,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ProductoComponent } from './components/producto/producto.component';
 import { SucursalComponent } from './components/sucursal/sucursal.component';
 import { ProveedorComponent } from './components/proveedor/proveedor.component';
+import { PrecioComponent } from './components/precio/precio.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProveedorComponent } from './components/proveedor/proveedor.component';
     PagenotfoundComponent,
     ProductoComponent,
     SucursalComponent,
-    ProveedorComponent
+    ProveedorComponent,
+    PrecioComponent
   ],
   imports: [
     BrowserModule,

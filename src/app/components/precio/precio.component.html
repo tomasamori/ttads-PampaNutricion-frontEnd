@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+
+        <form #precioForm="ngForm" (ngSubmit)="addPrecio(precioForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="precioService.selectedPrecio._id">
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="fechaDesde" class="form-control" placeholder="Ingrese fecha desde" [(ngModel)]="precioService.selectedPrecio.fechaDesde">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="number" name="valor" class="form-control" placeholder="Ingrese precio" [(ngModel)]="precioService.selectedPrecio.valor">
+          </div>
+
+          <button type="reset" class="btn btn-primary me-1 mt-2" (click)="resetForm(precioForm)">
+            Limpiar
+          </button>
+
+          <button type="submit" class="btn bg-light me-1 mt-2">
+            Guardar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Fecha desde</th>
+        <th scope="col">Valor</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let precio of precioService.precio">
+        <td>{{ precio.fechaDesde }}</td>
+        <td>{{ precio.valor }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="editPrecio(precio)">
+            <i class="material-icons">edit</i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deletePrecio(precio._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
