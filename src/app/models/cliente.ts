@@ -1,10 +1,16 @@
-export interface Cliente{
-  cuil: String,
-  cuit: String,
+export interface Cliente {
+//  idUsuario: string,
+  usuario: {usuario: string},
+  cuil: string,
+  cuit: string,
   nombre: string,
   apellido: string,
-  direccion: String,
-  telefono: String,
+  fechaNacimiento: Date,
+  direccion: string,
+  telefono: string,
   razonSocial: string,
-  id?:string
+
+  createdAt?: string,
+  updatedAt?: string,
+  _id?: string
 }

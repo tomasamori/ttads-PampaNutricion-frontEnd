@@ -1,0 +1,108 @@
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+
+        <form #clienteForm="ngForm" (ngSubmit)="addCliente(clienteForm)">
+
+          <input type="hidden" name="_id" [(ngModel)]="clienteService.selectedCliente._id">
+
+<!--          <div class="form-group mt-2 mb-2">
+            <input type="text" name="idUsuario" class="form-control" placeholder="Ingrese el id del Usuario" [(ngModel)]="clienteService.selectedCliente.idUsuario">
+          </div>
+-->
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="usuario" class="form-control" placeholder="Ingrese el usuario" [(ngModel)]="clienteService.selectedCliente.usuario">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="cuil" class="form-control" placeholder="Ingrese el cuil" [(ngModel)]="clienteService.selectedCliente.cuil">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="cuit" class="form-control" placeholder="Ingrese el cuit" [(ngModel)]="clienteService.selectedCliente.cuit">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese el nombre" [(ngModel)]="clienteService.selectedCliente.nombre">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="apellido" class="form-control" placeholder="Ingrese el apellido" [(ngModel)]="clienteService.selectedCliente.apellido">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="fechaNacimiento" class="form-control" placeholder="Ingrese la fecha de nacimiento" [(ngModel)]="clienteService.selectedCliente.fechaNacimiento">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="direccion" class="form-control" placeholder="Ingrese la direccion" [(ngModel)]="clienteService.selectedCliente.direccion">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="telefono" class="form-control" placeholder="Ingrese el telefono" [(ngModel)]="clienteService.selectedCliente.telefono">
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <input type="text" name="razonSocial" class="form-control" placeholder="Ingrese la razon social" [(ngModel)]="clienteService.selectedCliente.razonSocial">
+          </div>
+
+          <button type="reset" class="btn btn-primary me-1 mt-2" (click)="resetForm(clienteForm)">
+            Limpiar
+          </button>
+
+          <button type="submit" class="btn bg-light me-1 mt-2">
+            Guardar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <!--<th scope="col">ID</th>-->
+        <th scope="col">Usuario</th>
+        <th scope="col">Cuil</th>
+        <th scope="col">Cuit</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Fecha de Nacimiento</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Razon Social</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cliente of clienteService.clientes">
+        <!--<td>{{ cliente.idUsuario }}</td>-->
+        <td>{{ cliente.usuario.usuario}}</td>
+        <td>{{ cliente.cuil }}</td>
+        <td>{{ cliente.cuit }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.apellido }}</td>
+        <td>{{ cliente.fechaNacimiento }}</td>
+        <td>{{ cliente.direccion }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.razonSocial }}</td>
+        <td>
+          <button class="btn btn-light btn-sm" (click)="editCliente(cliente)">
+            <i class="material-icons">edit</i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteCliente(cliente._id)">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+

@@ -14,6 +14,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { SucursalComponent } from './components/sucursal/sucursal.component';
 import { ProveedorComponent } from './components/proveedor/proveedor.component';
 import { PrecioComponent } from './components/precio/precio.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PrecioComponent } from './components/precio/precio.component';
     ProductoComponent,
     SucursalComponent,
     ProveedorComponent,
-    PrecioComponent
+    PrecioComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
