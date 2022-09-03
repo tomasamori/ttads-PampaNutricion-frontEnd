@@ -9,7 +9,7 @@
           <input type="hidden" name="_id" [(ngModel)]="precioService.selectedPrecio._id">
 
           <div class="form-group mt-2 mb-2">
-            <input type="text" name="fechaDesde" class="form-control" placeholder="Ingrese fecha desde" [(ngModel)]="precioService.selectedPrecio.fechaDesde">
+            <input type="date" name="fechaDesde" class="form-control" placeholder="Ingrese fecha desde" [(ngModel)]="precioService.selectedPrecio.fechaDesde">
           </div>
 
           <div class="form-group mt-2 mb-2">
@@ -40,7 +40,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let precio of precioService.precio">
-        <td>{{ precio.fechaDesde }}</td>
+        <td>{{ cdate(precio.fechaDesde) }}</td>
         <td>{{ precio.valor }}</td>
         <td>
           <button class="btn btn-light btn-sm" (click)="editPrecio(precio)">

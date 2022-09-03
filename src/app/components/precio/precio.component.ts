@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrecioService } from "../../services/precio/precio.service";
 import { NgForm } from "@angular/forms";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-precio',
@@ -9,7 +10,7 @@ import { NgForm } from "@angular/forms";
 })
 export class PrecioComponent implements OnInit {
 
-  constructor(public precioService: PrecioService) { }
+  constructor(public precioService: PrecioService) {  }
 
   ngOnInit(): void {
     this.getPrecios();
@@ -33,6 +34,7 @@ export class PrecioComponent implements OnInit {
     if (form.value._id) {
       this.precioService.updatePrecio(form.value).subscribe(
         res => {
+          this.getPrecios();
           form.reset();
         }
       )
@@ -59,7 +61,13 @@ export class PrecioComponent implements OnInit {
   }
 
   editPrecio(precio) {
-    this.precioService.selectedPrecio = precio;
+    this.precioService.selectedPrecio._id = precio._id;
+    // @ts-ignore
+    this.precioService.selectedPrecio.fechaDesde = moment(precio.fechaDesde).add(1, 'days').format('YYYY-MM-DD')//(moment(precio.fechaDesde).format('YYYY-MM-DD'));
+    this.precioService.selectedPrecio.valor = precio.valor;
   }
 
+  cdate(fechaDesde: Date) {
+    return moment(fechaDesde).utcOffset('+0300').format('DD-MM-YYYY');
+  }
 }
