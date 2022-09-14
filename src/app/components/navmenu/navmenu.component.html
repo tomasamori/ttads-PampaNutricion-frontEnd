@@ -1,11 +1,102 @@
-<h1>Menu de Opciones</h1>
+<!--
+<h1>MENU DE OPCIONES</h1>
 <nav navbar navbar-expand-lg navbar-light bg-light>
-  <a routerLink="/home" routerLinkActive="active-link">Home</a>
-  <a routerLink="/localidad" routerLinkActive="active-link">---ABM Localidad</a>
-  <a routerLink="/tipo-mascota" routerLinkActive="active-link">---ABM Tipo de Mascota</a>
-  <a routerLink="/producto" routerLinkActive="active-link">---ABM Producto</a>
-  <a routerLink="/sucursal" routerLinkActive="active-link">---ABM Sucursal</a>
-  <a routerLink="/proveedor" routerLinkActive="active-link">---ABM Proveedor</a>
-  <a routerLink="/precio" routerLinkActive="active-link">---ABM Precio</a>
-  <a routerLink="/cliente" routerLinkActive="active-link">---ABM Cliente</a>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/home" routerLinkActive="active-link">Home</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/localidad" routerLinkActive="active-link">ABM Localidad</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/tipo-mascota" routerLinkActive="active-link">ABM Tipo de Mascota</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/producto" routerLinkActive="active-link">ABM Producto</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/sucursal" routerLinkActive="active-link">ABM Sucursal</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/proveedor" routerLinkActive="active-link">ABM Proveedor</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/precio" routerLinkActive="active-link">ABM Precio</button>
+  &nbsp;&nbsp;&nbsp;
+  <button routerLink="/cliente" routerLinkActive="active-link">ABM Cliente</button>
+  <br>
 </nav>
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menù Lateral con Css</title>
+  <link rel="stylesheet" href="navmenu.component.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="btn-menu">
+      <label for="btn-menu">☰</label>
+    </div>
+    <div class="logo">
+      <h1>Logotipo</h1>
+    </div>
+    <nav class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Blog</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+</header>
+<div class="capa"></div>
+
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+  <div class="cont-menu">
+    <nav>
+      <a href="/home" routerLinkActive="active-link">Home</a>
+      <a href="/localidad" routerLinkActive="active-link">ABM Localidad</a>
+      <a href="/tipo-mascota" routerLinkActive="active-link">ABM Tipo de Mascota</a>
+      <a href="/producto" routerLinkActive="active-link">ABM Producto</a>
+      <a href="/sucursal" routerLinkActive="active-link">ABM Sucursal</a>
+      <a href="/proveedor" routerLinkActive="active-link">ABM Proveedor</a>
+      <a href="/precio" routerLinkActive="active-link">ABM Precio</a>
+      <a href="/precio" routerLinkActive="active-link">ABM Precio</a>
+      <a href="/cliente" routerLinkActive="active-link">ABM Cliente</a>
+    </nav>
+    <label for="btn-menu">✖️</label>
+  </div>
+</div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Menu de Navegación</title>
+  <link rel="stylesheet" href="navmenu.component.css">
+</head>
+<body>
+
+<header>
+  <div class="menu">
+<nav>
+      <ul>
+        <li><a href="/home" routerLinkActive="active-link">Home</a></li>
+        <li><a href="/localidad" routerLinkActive="active-link">ABM Localidad</a></li>
+        <li><a href="/tipo-mascota" routerLinkActive="active-link">ABM Tipo de Mascota</a></li>
+        <li><a href="/producto" routerLinkActive="active-link">ABM Producto</a></li>
+        <li><a href="/sucursal" routerLinkActive="active-link">ABM Sucursal</a></li>
+        <li><a href="/proveedor" routerLinkActive="active-link">ABM Proveedor</a></li>
+        <li><a href="/precio" routerLinkActive="active-link">ABM Precio</a></li>
+        <li><a href="/cliente" routerLinkActive="active-link">ABM Cliente</a></li>
+        <li><a href="/listado" routerLinkActive="active-link">Listado de Productos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</body>
+</html>
+

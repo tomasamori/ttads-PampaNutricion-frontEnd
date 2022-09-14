@@ -10,6 +10,9 @@ import {ProveedorService} from "./services/proveedor/proveedor.service";
 import {ProveedorComponent} from "./components/proveedor/proveedor.component";
 import {PrecioComponent} from "./components/precio/precio.component";
 import {ClienteComponent} from "./components/cliente/cliente.component";
+import {ListadoComponent} from "./components/listado/listado.component";
+import {DetalleComponent} from "./components/detalle/detalle.component";
+
 
 //Rutas de Navegacion
 const routes: Routes = [
@@ -22,9 +25,9 @@ const routes: Routes = [
   {path: 'proveedor', component: ProveedorComponent},
   {path: 'precio', component: PrecioComponent},
   {path: 'cliente', component: ClienteComponent},
+  {path: 'listado', component: ListadoComponent},
+  {path: 'detalle/:id', component: DetalleComponent},
   {path: '**', component: PagenotfoundComponent}, //Comodin: Cuando se ingresa una url que no existe
-
-
 ];
 
 @NgModule({
