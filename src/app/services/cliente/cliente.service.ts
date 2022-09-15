@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Cliente } from "../../models/cliente"
+import {Observable} from "rxjs";
+import {Producto} from "../../models/producto";
 
 @Injectable({
   providedIn: 'root'
@@ -42,4 +44,9 @@ export class ClientesService {
   deletecliente(_id:string) {
     return this.http.delete(`${this.URL_API}/${_id}`)
   }
+
+  getRecordById(_id: String): Observable<Cliente>{
+    return this.http.get<Cliente>(`${this.URL_API}/${_id}`);
+  }
+
 }

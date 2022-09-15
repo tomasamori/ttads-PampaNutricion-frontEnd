@@ -1,14 +1,17 @@
 <div class="blog-card alt">
   <div class="meta">
-    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-
+    <div class="photo">
+      <img src="{{productoDetalle.imgUrl}}">
+    </div>
   </div>
   <div class="description">
     <h1>{{productoDetalle.nombre}}</h1>
-    <h2>$500</h2>
+    <h2>${{productoDetalle.precio}}</h2>
     <p>Marca:   {{productoDetalle.marca}}</p>
     <p>{{productoDetalle.descripcion}}</p>
-    <p>Peso:  {{productoDetalle.peso}}</p>
+    <p>Peso:  {{productoDetalle.peso}} kg</p>
+    <p>Categoria:  {{productoDetalle.categoria}}</p>
+    <p>Descuento:  {{productoDetalle.promo}}%</p>
     <p class="read-more">
       <button type="button" class="btn btn-outline-dark" href="#">Añadir al carrito</button>
     </p>

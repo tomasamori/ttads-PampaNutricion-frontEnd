@@ -12,6 +12,7 @@ import {PrecioComponent} from "./components/precio/precio.component";
 import {ClienteComponent} from "./components/cliente/cliente.component";
 import {ListadoComponent} from "./components/listado/listado.component";
 import {DetalleComponent} from "./components/detalle/detalle.component";
+import {DetalleClienteComponent} from "./components/detalle-cliente/detalle-cliente.component";
 
 
 //Rutas de Navegacion
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'cliente', component: ClienteComponent},
   {path: 'listado', component: ListadoComponent},
   {path: 'detalle/:id', component: DetalleComponent},
+  {path: 'detalle-cliente/:id', component: DetalleClienteComponent},
   {path: '**', component: PagenotfoundComponent}, //Comodin: Cuando se ingresa una url que no existe
 ];
 

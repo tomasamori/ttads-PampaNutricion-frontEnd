@@ -14,7 +14,12 @@ export class ProductoService {
     marca:'',
     nombre: '',
     descripcion:'',
-    peso:''
+    peso:'',
+    imgUrl:'',
+    //tipoMascota: {tipoMascota: null},
+    precio: '',
+    categoria: '',
+    promo:0
   };
 
   producto: Producto[];
@@ -41,4 +46,7 @@ export class ProductoService {
   getRecordById(_id: String): Observable<Producto>{
     return this.http.get<Producto>(`${this.URL_API}/${_id}`);
   }
+
+
+
 }

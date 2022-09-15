@@ -26,7 +26,6 @@ export class ProductoComponent implements OnInit {
       },
       err => console.log(err)
     )
-
   }
 
   addProducto(form: NgForm) {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientesService } from  "../../services/cliente/cliente.service"
 import { NgForm } from "@angular/forms";
+import {Router} from "@angular/router";
+import * as moment from "moment";
 
 @Component({
   selector: 'app-cliente',
@@ -9,7 +11,8 @@ import { NgForm } from "@angular/forms";
 })
 export class ClienteComponent implements OnInit {
 
-  constructor(public clienteService: ClientesService) { }
+  constructor(public clienteService: ClientesService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getClientes();
@@ -61,6 +64,14 @@ export class ClienteComponent implements OnInit {
 
   editCliente(cliente) {
     this.clienteService.selectedCliente = cliente;
+  }
+
+  cdate(fechaDesde: Date) {
+    return moment(fechaDesde).utcOffset('+0300').format('DD-MM-YYYY');
+  }
+
+  OpenDetails(id){
+    this.router.navigate([`/detalle-cliente/${id}`])
   }
 
 }

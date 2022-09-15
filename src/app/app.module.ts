@@ -17,6 +17,7 @@ import { PrecioComponent } from './components/precio/precio.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { ListadoComponent } from './components/listado/listado.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { DetalleClienteComponent } from './components/detalle-cliente/detalle-cliente.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     ClienteComponent,
     ListadoComponent,
     DetalleComponent,
+    DetalleClienteComponent,
   ],
   imports: [
     BrowserModule,

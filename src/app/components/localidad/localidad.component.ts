@@ -60,6 +60,8 @@ export class LocalidadComponent implements OnInit {
 
   editLocalidad(localidad) {
     this.localidadService.selectedLocalidad = localidad;
+    this.getLocalidades();
+
   }
 
 }
