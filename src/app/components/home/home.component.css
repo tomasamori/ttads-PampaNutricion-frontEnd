@@ -43,7 +43,7 @@ body {
 .card .details .center {
   padding: 20px;
   text-align: center;
-  background: #fff;
+  background: #000000;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -51,19 +51,23 @@ body {
 .card .details .center h1 {
   margin: 0;
   padding: 0;
-  color: #ff3636;
+  color: #ffffff;
+  text-shadow: 0.1em 0.1em #e76720;
   line-height: 20px;
-  font-size: 20px;
+  font-size: 23px;
   text-transform: uppercase;
 }
 .card .details .center h1 span {
   font-size: 14px;
-  color: #262626;
+  color: #ffffff;
 }
 .card .details .center p {
   margin: 10px 0;
   padding: 0;
-  color: #262626;
+  color: #ffffff;
+  text-shadow: 0.1em 0.1em #e76720;
+  font-size: 12px;
+  text-align: left;
 }
 .card .details .center ul {
   margin: 10px auto 0;
