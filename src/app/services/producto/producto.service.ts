@@ -16,8 +16,8 @@ export class ProductoService {
     descripcion:'',
     peso:'',
     imgUrl:'',
-    //tipoMascota: {tipoMascota: null},
-    precio: '',
+    tipoMascota: {tipoMascota: ''},
+    precio: {id:'',fechaDesde:new Date(),valor:0},
     categoria: '',
     promo:0
   };
