@@ -1,0 +1,72 @@
+<div *ngIf="getallProd().length!=0">
+<div class="container mt-5">
+  <div class="row col-md-12">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="card">
+        <div class="card-body text-center table-responsive">
+          <span class="titulo text-center">CARRITO</span>
+          <table *ngIf="getallProd().length!=0" class="table table-striped">
+            <div class="container col-md-12">
+              <div class="card mb-3" *ngFor="let item of carritoService.productos">
+                <div class="row g-0">
+                  <div class="col-md-3">
+                    <img src="{{item.imgUrl}}" class="img-fluid rounded-start mt-auto" style="max-width: 210px;" alt="...">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h5 class="card-title text-title">{{item.nombre}}</h5>
+                      <div class="form-floating mb-3">
+                        <button (click)="RestarCantidad(item)" class="btn-res btn-info btn-lg float-end"><h2 class="h2+-">-</h2></button>
+                        <input type="text" class="text-can form-control text-center" id="floatingInput1" placeholder="name@example.com" value="{{item.cantidad.toString()}}"readonly #cantidad>
+                        <label for="floatingInput" class="can">Cantidad</label>
+                        <button (click)="Sumar(item)" class="btn-sum btn-info btn-lg float-end"><h2 class="h2+-">+</h2></button>
+                        <input type="text" class="text-pre form-control text-center" id="floatingInput2" placeholder="name@example.com" value="${{item.precio.valor}}"readonly>
+                        <label for="floatingInput" class="pu">Precio Unitario</label>
+                          <input type="text" class="text-sub form-control text-center" id="floatingInput" placeholder="name@example.com" value="${{this.subtotal(item)}}"readonly>
+                        <label for="floatingInput" class="su">Subtotal</label>
+                      </div >
+                      <div class="container mt">
+                        <div class="row-cols-1 col-md-12 col-lg-12">
+                            <div class="card">
+                              <div class="card-body">
+                                <span class="card-text">{{item.descripcion}}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <br>
+                      <br>
+                    </div>
+                    <button type="button" class="btn btn btn-danger btn-lg float-end" (click)="Delete(item)">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </table>
+        </div>
+        <input readonly type="text" class="in form-control" id="total" placeholder="name@example.com" min="1" inputmode="text" value="Total ${{this.total()}}"><br>
+        <div class="container">
+          <button type="button" class="btn btn-c btn-success btn-lg float-end"(click)="Comprar()">Comprar</button>
+          <button type="button" class="btn btn-v btn-danger btn-lg float-end" (click)="Vaciar()">Vaciar</button>
+        </div>
+        </div>
+</div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="getallProd().length==0">
+  <div>
+  <div class="container mt-5 ">
+    <div class="container">
+      <div class="container c-va">
+        <button class="btn btn-success va" type="button">Comprar</button>
+      </div>
+      <div class="container conva">
+        <img src="https://i.pinimg.com/564x/55/26/8c/55268c6a3e4ce1823888c9825eac5c5e.jpg">
+        <h5 class="cv">El carrito esta vacio</h5>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,148 @@
+.img{
+  width: 80px;
+  height: 80px;
+  border-style: none;
+  vertical-align: top;
+}
+.form-control{
+  width: 100px;
+  height: 38px;
+  text-align: center;
+  display: inline;
+}
+.va{
+  width: 200px;
+}
+.c-va{
+  position: absolute;
+  width: auto;
+  left: 915px;
+  top: 700px;
+}
+.cv{
+  position: absolute;
+  left: 230px;
+  top: 500px;
+}
+.container{
+  padding: 1px;
+  overflow: auto;
+}
+.conva{
+  position: absolute;
+  right: -90px;
+  top:100px
+}
+.btn{
+  height: 38px;
+  position: center;
+  margin: auto ;
+
+}
+.body{
+background-color:lightgray;
+  height: 870px;
+}
+.item{
+  position: center;
+}
+.btn-c{
+  position: relative;
+  right: 100px;
+}
+.btn-v{
+  position: relative;
+  right: 100px;
+}
+.in{
+  background-color:lightgreen;
+  width: 200px;
+  height: 38px;
+  text-align: center;
+  display: inline;
+}
+.col{
+  width: 25px!important;
+}
+.footer
+{
+  background-color: #FF7F50;
+  height: 57px;
+  width: auto;
+}
+.can{
+  position: absolute;
+  right: -40px;
+  top:-8px;
+}
+.pu{
+  position: absolute;
+  right: 395px;
+  top:-8px;
+}
+.cant{
+  position: relative;
+  left: 150px;
+}
+.text-pre{
+  position: relative;
+  left: 150px;
+}
+.text-can{
+  position: relative;
+  width: 100px;
+  height: 35px;
+  right: -17px;
+}
+.btn-res{
+  position: relative;
+  right:460px;
+  height: 35px;
+}
+.text-pre{
+  position: absolute;
+  left: 100px;
+  top:0px;
+}
+.btn-sum{
+  position: relative;
+  right:240px;
+  height: 35px;
+  text-align: center;
+}
+.des{
+  max-font-size: 20px;
+}
+.h2\+-{
+  position: relative;
+  bottom: 15px;
+}
+.text-title{
+  position: relative;
+  right: 230px;
+}
+.text-sub{
+  position: absolute;
+  right:150px;
+  top:0px;
+}
+.su{
+  position: absolute;
+  top:-5px;
+  right: -520px;
+}
+.car{
+  position: absolute;
+}
+.comprar{
+  float: right;
+}
+.total{
+  float: right;
+}
+input[type=number] { -moz-appearance:textfield; }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
