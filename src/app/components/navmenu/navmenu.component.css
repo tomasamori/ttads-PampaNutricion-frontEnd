@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+.img{
+  position: absolute;
+  right: 430px;
+  top: 0px
+}
 
 body {
   background: #292929;
