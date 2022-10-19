@@ -48,11 +48,12 @@ background-color:lightgray;
 }
 .btn-c{
   position: relative;
-  right: 100px;
+  right: 10px;
+
 }
 .btn-v{
   position: relative;
-  right: 100px;
+  right: 20px;
 }
 .in{
   background-color:lightgreen;
@@ -71,13 +72,13 @@ background-color:lightgray;
   width: auto;
 }
 .can{
-  position: absolute;
-  right: -40px;
+  position: relative;
+  left: 190px;
   top:-8px;
 }
 .pu{
-  position: absolute;
-  right: 395px;
+  position: relative;
+  left: -96px;
   top:-8px;
 }
 .cant{
@@ -92,12 +93,14 @@ background-color:lightgray;
   position: relative;
   width: 100px;
   height: 35px;
-  right: -17px;
+  left: 280px;
 }
 .btn-res{
   position: relative;
-  right:460px;
+  right:320px;
   height: 35px;
+  top: 1px;
+  text-align: center;
 }
 .text-pre{
   position: absolute;
@@ -106,8 +109,9 @@ background-color:lightgray;
 }
 .btn-sum{
   position: relative;
-  right:240px;
+  right:80px;
   height: 35px;
+  top: 1px;
   text-align: center;
 }
 .des{
@@ -122,14 +126,15 @@ background-color:lightgray;
   right: 230px;
 }
 .text-sub{
-  position: absolute;
-  right:150px;
+  position: relative;
+  right:-162px;
   top:0px;
 }
 .su{
   position: absolute;
-  top:-5px;
-  right: -520px;
+  left: 494px;
+  top:-8px;
+
 }
 .car{
   position: absolute;
@@ -145,4 +150,19 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.titulo{
+  position: relative;
+  right:-420px;
+  top:-5px;
+}
+.card-title{
+  position: relative;
+  right: -250px;
+  top: -6px;
+}
+.cv{
+  position: relative;
+  top: -10px;
+  left: 0px;
 }

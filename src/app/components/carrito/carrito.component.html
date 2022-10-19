@@ -1,12 +1,10 @@
 <div *ngIf="getallProd().length!=0">
 <div class="container mt-5">
-  <div class="row col-md-12">
-    <div class="col-lg-10 offset-lg-1">
+    <div class="col-lg-8 offset-lg-1">
       <div class="card">
-        <div class="card-body text-center table-responsive">
+        <div class="card-body ">
           <span class="titulo text-center">CARRITO</span>
           <table *ngIf="getallProd().length!=0" class="table table-striped">
-            <div class="container col-md-12">
               <div class="card mb-3" *ngFor="let item of carritoService.productos">
                 <div class="row g-0">
                   <div class="col-md-3">
@@ -41,17 +39,15 @@
                   </div>
                 </div>
               </div>
-            </div>
           </table>
         </div>
         <input readonly type="text" class="in form-control" id="total" placeholder="name@example.com" min="1" inputmode="text" value="Total ${{this.total()}}"><br>
-        <div class="container">
+        <div class="cv container">
           <button type="button" class="btn btn-c btn-success btn-lg float-end"(click)="Comprar()">Comprar</button>
           <button type="button" class="btn btn-v btn-danger btn-lg float-end" (click)="Vaciar()">Vaciar</button>
         </div>
         </div>
 </div>
-  </div>
 </div>
 </div>
 

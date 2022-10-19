@@ -27,7 +27,6 @@ item.cantidad+=1;
 this.carritoService.addCarrito(item);
   }
 
-
   RestarCantidad(item: Producto) {
     item.cantidad-=1;
     this.carritoService.addCarrito(item);
@@ -48,7 +47,7 @@ return this.totalpr;
   }
 
   Comprar() {
-
+    this.router.navigate(['/listado']);
   }
 
   Vaciar() {

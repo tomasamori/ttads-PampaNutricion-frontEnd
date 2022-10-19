@@ -6,7 +6,7 @@ import {Producto} from "../../models/producto";
 })
 export class CarritoService {
  public productos:Producto[]=[];
-  constructor() { }
+  constructor() {}
 
   addCarrito(productoDetalle: Producto) {
     if(localStorage.getItem('productos')===null){
@@ -30,17 +30,14 @@ export class CarritoService {
     }
   }
   deleteProd(productoDetalle:Producto){
-    debugger;
     this.productos=JSON.parse(localStorage.getItem('productos'))
     this.productos.forEach((prod,i)=>{
       if(productoDetalle._id==this.productos[i]._id){
         this.productos.splice(i,1);
         localStorage.setItem('productos',JSON.stringify(this.productos));
-        debugger;
       }
     })
-    console.log(this.productos)
-debugger;
+    //console.log(this.productos)
       }
   updateProd(productoDetalle:Producto){
     this.productos=JSON.parse(localStorage.getItem('productos'));
@@ -68,6 +65,5 @@ validar(productoDetalle: Producto) {
   vaciarCarrito() {
     this.productos=[];
     localStorage.clear();
-    debugger;
   }
 }
