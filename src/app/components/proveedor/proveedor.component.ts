@@ -60,4 +60,8 @@ export class ProveedorComponent implements OnInit {
   editProveedor(proveedor) {
     this.proveedorService.selectedProveedor = proveedor;
   }
+
+  Refrescar() {
+    window.location.reload();
+  }
 }

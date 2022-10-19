@@ -64,4 +64,8 @@ export class LocalidadComponent implements OnInit {
 
   }
 
+  Refrescar() {
+    window.location.reload();
+  }
+
 }

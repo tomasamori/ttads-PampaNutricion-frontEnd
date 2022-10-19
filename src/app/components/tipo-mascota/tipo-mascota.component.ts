@@ -62,4 +62,8 @@ export class TipoMascotaComponent implements OnInit {
     this.tipoMascotaService.selectedTipoMascota = tipoMascota;
   }
 
+  Refrescar() {
+    window.location.reload();
+  }
+
 }

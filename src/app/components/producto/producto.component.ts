@@ -61,4 +61,7 @@ export class ProductoComponent implements OnInit {
     this.productoService.selectedProducto = producto;
   }
 
+  Refrescar() {
+    window.location.reload();
+  }
 }
