@@ -28,9 +28,11 @@ section h2{
   border-radius: 15px;
 }
 .estilo-c .img-container img{
-  width: 105%;
-  position: absolute;
-  top: -60%;
+  width: 400px;
+  height: 280px;
+  position: relative;
+  top: -15px;
+  left: 120px;
   transition: all 0.5s;
 }
 .estilo-c:hover .img-container img{

@@ -2,7 +2,7 @@
 <div class="blog-card alt">
   <div class="meta">
     <div class="photo">
-      <img src="{{productoDetalle.imgUrl}}">
+      <img class="ima" src="{{productoDetalle.imgUrl}}">
     </div>
   </div>
   <div class="description">
@@ -13,12 +13,12 @@
     <p>Peso:  {{productoDetalle.peso}} kg</p>
     <p>Categoria:  {{productoDetalle.cantidad}}</p>
     <p>Descuento:  {{productoDetalle.promo}}%</p>
-    <p><button (click)="RestarCantidad(cantidad.value)">-</button>
-      <input id="cantidad" type="number" value="1" min="1" inputmode="numeric" required #cantidad>
-      <button (click)="SumarCantidad(cantidad.value)">+</button>
+    <p><button class="btn btn-primary" (click)="RestarCantidad(cantidad.value)">-</button>
+      <input class="form-control" aria-label="Amount (to the nearest dollar)" id="cantidad" type="number" value="1" min="1" inputmode="numeric" required #cantidad>
+      <button class="btn btns btn-primary" (click)="SumarCantidad(cantidad.value)">+</button>
       </p>
     <p class="read-more">
-      <button type="button" class="btn btn-outline-dark" (click)="addCarrito(productoDetalle,cantidad.value) ">Añadir al carrito</button>
+      <button type="button" class="btn btnc btn-success" (click)="addCarrito(productoDetalle,cantidad.value) ">Añadir al carrito</button>
     </p>
   </div>
 </div>
