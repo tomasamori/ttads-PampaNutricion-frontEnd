@@ -46,7 +46,4 @@ export class ProductoService {
   getRecordById(_id: String): Observable<Producto>{
     return this.http.get<Producto>(`${this.URL_API}/${_id}`);
   }
-
-
-
 }
